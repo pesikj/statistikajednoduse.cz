@@ -1,0 +1,1 @@
+# statistikajednoduse.cz
