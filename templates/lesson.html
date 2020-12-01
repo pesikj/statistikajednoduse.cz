@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="section">
+        <div class="row">
+            <div class="col s3">
+                <div class="collection" style="margin-top: 140px">
+                    {% for link in links %}
+                    <a href="#{{ link[0] }}" class="collection-item">{{ link[1] }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col s9">
+                <h1>{{ title }}</h1>
+                {% autoescape false %}
+                {{ lesson_content }}
+                {% endautoescape %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
