@@ -11,5 +11,6 @@
     "[django-html]": {},
     "files.associations": {
         "*.html": "html"
-    }
+    },
+    "python.formatting.provider": "black"
 }

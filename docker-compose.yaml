@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: flask_web
+    command: flask run --host=0.0.0.0
+    volumes:
+      - .:/usr/src/app/
+    ports:
+      - 5000:5000
+    env_file:
+      - ./.env.dev
+
+volumes:
+  postgres_data:
